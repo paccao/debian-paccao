@@ -39,9 +39,9 @@ mv /home/$username/debian-paccao/.config/sddm.conf /etc/sddm.conf
 ## Installing sugar-candy dependencies
 nala install libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2 -y
 # Installing Essential Programs
-nala install feh i3 sxhkd urxvt rofi picom thunar nitrogen lxpolkit x11-xserver-utils unzip yad wget pulseaudio pulseeffects pavucontrol vim tmux -y
+nala install feh i3 sxhkd urxvt rofi picom thunar nitrogen lxpolkit x11-xserver-utils unzip yad wget pulseaudio pulseeffects pavucontrol vim tmux sddm -y
 # Installing Other less important Programs
-nala install neofetch flameshot lxappearance papirus-icon-theme fonts-noto-color-emoji fonts-font-awesome sddm -y
+nala install neofetch flameshot lxappearance papirus-icon-theme fonts-noto-color-emoji fonts-font-awesome -y
 
 # Installing fonts
 cd $builddir
@@ -59,8 +59,8 @@ rm ./FiraCode.zip ./Meslo.zip
 
 # Install brave-browser
 sudo nala install apt-transport-https curl -y
-sudo curl -fsSLo /usr/share/keyrings/rave-browser-archive-keyring.#gpg https://rave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /tc/#apt/sources.list.d/brave-browser-release.list
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo nala update
 sudo nala install brave-browser -y
 
