@@ -35,6 +35,8 @@ mv user-dirs.dirs /home/$username/.config
 chown -R $username:$username /home/$username
 tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
 mv /home/$username/.config/sddm.conf /etc/sddm.conf
+mv .vimrc ~/
+mv .tmux.conf ~/
 
 ## Installing sugar-candy dependencies
 nala install libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2 -y
@@ -45,9 +47,9 @@ nala install neofetch flameshot lxappearance papirus-icon-theme fonts-noto-color
 
 # Installing fonts
 cd $builddir
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/FiraCode.zip
 unzip FiraCode.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/Meslo.zip
 unzip Meslo.zip -d /home/$username/.fonts
 mv dotfonts/fontawesome/otfs/*.otf /home/$username/.fonts/
 chown $username:$username /home/$username/.fonts/*
