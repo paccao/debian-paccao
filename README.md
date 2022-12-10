@@ -15,7 +15,7 @@ _do NOT grab the EDU download and this includes non-free and firmware_
 ### To install, run the following in a terminal:
 
 ```
-git clone https://github.com/paccao/dotfiles_
+git clone https://github.com/paccao/debian-paccao
 cd debian-paccao
 chmod +x install.sh
 ./install.sh
