@@ -27,19 +27,15 @@ cd $builddir
 mkdir -p /home/$username/.config
 mkdir -p /home/$username/.fonts
 mkdir -p /home/$username/Pictures/Backgrounds
-mkdir -p /usr/share/sddm/themes
 cp .Xresources /home/$username
 cp -R dotconfig/* /home/$username/.config/
 cp -R Backgrounds /home/$username/Pictures/
 mv user-dirs.dirs /home/$username/.config
 chown -R $username:$username /home/$username
-tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
 mv /home/$username/.config/sddm.conf /etc/sddm.conf
 mv .vimrc ~/
 mv .tmux.conf ~/
 
-## Installing sugar-candy dependencies
-nala install libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2 -y
 # Installing Essential Programs
 nala install feh i3 sxhkd rxvt-unicode rofi picom thunar nitrogen lxpolkit x11-xserver-utils unzip yad wget pulseaudio pulseeffects pavucontrol vim tmux sddm -y
 # Installing Other less important Programs
