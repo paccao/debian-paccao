@@ -1,0 +1,86 @@
+! I used gpick to get the color values from the Ant-Dracula GTK Theme
+!(https://github.com/EliverLara/Ant-Dracula) and merged them with the
+! Dracula Xresources theme (https://draculatheme.com/xresources)
+
+! special
+*.foreground: #F8F8F2
+*.background: #282A36
+*.cursorColor:  #ff79c6
+
+! black
+*.color0:     #000000
+*.color8:     #4D4D4D
+
+! red
+*.color1:     #FF5555
+*.color9:     #FF6E67
+
+! green
+*.color2:     #50FA7B
+*.color10:    #5AF78E
+
+! yellow
+*.color3:     #F1FA8C
+*.color11:    #F4F99D
+
+! blue
+*.color4:     #BD93F9
+*.color12:    #CAA9FA
+
+! magenta
+*.color5:     #FF79C6
+*.color13:    #FF92D0
+
+! cyan
+*.color6:     #8BE9FD
+*.color14:    #9AEDFE
+
+! white
+*.color7:     #BFBFBF
+*.color15:    #E6E6E6
+
+URxvt.intensityStyles:	false
+URxvt.background:       #2f343f
+URxvt.depth:		32
+URxvt.scrollBar:	false
+URxvt.internalBorder:   0
+URxvt.font:		xft:Inconsolata:style=Regular:antialiasing=true:size=14
+URxvt.transparent:      true
+URxvt.shading:          20
+
+!! Extensions
+URxvt.perl-ext-common:	default,matcher,resize-font,url-select,keyboard-select,-confirm-paste
+URxvt.colorUL:		#f1fa8c
+!! url-select
+URxvt.keysym.M-u:	perl:url-select:select_next
+URxvt.url-select.launcher: linkhandler
+URxvt.url-select.underline: true
+!! keyboard-select:
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+!! resize-font
+URxvt.resize-font.smaller:	C-Down
+URxvt.resize-font.bigger:	C-Up
+!! Matcher
+URxvt.url-launcher:	linkhandler
+URxvt.matcher.button:	1
+!! Restore Ctrl+Shift+(c|v) clipboard
+URxvt.keysym.Shift-Control-V:	eval:paste_clipboard
+URxvt.keysym.Shift-Control-C:	eval:selection_to_clipboard
+URxvt.iso14755:			false
+URxvt.iso14755_52:		false
+
+
+rofi.modi:		ssh,window,drun,run
+rofi.color-enabled:	true
+rofi.color-window:	#282A36, #282A36, #282A36
+rofi.color-normal:	#282A36, #f8f8f2, #2f343f, #ff79c6, #282A36
+!rofi.color-active:	#002b37, #008ed4, #003643, #008ed4, #66c6ff
+!rofi.color-urgent:	#002b37, #da4281, #003643, #008ed4, #890661
+
+! rofi.fake-transparency:	false
+!rofi.lines:		8
+! rofi.bw:		0
+! rofi.opacity:		"10"
+rofi.hide-scrollbar:	true
+! rofi.width:		30
+
