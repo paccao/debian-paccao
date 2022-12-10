@@ -1,6 +1,7 @@
 # Debian Minimal with i3
 
 The Debian configuration was copied from https://github.com/ChrisTitusTech/Debian-titus installation and modified to fit my own needs. Credits to them!
+
 ## Requirements
 
 _This install changes Debian to the SID (Dev) Branch_
@@ -19,5 +20,9 @@ cd debian-paccao
 chmod +x install.sh
 ./install.sh
 ```
+
+You may need to manually run `sudo dpkg --configure -a` to fix the installation.
+
 ## How to install the vim plugin YouCompleteMe:
+
 https://ethans.me/posts/2018-09-01-installing-vim-with-youcompleteme-plugin-to-enable-autocomplete/
