@@ -21,7 +21,10 @@ apt-get update
 apt install sudo -y
 usermod -aG sudo joel # change 'joel' to your $username
 id joel # check that your user has the sudo group.
+exit
 su joel
+```
+```
 git clone https://github.com/paccao/debian-paccao
 cd debian-paccao
 chmod +x install.sh
