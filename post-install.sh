@@ -1,17 +1,17 @@
 #!/usr/bin/bash
 
 # Create custom ls alias
-echo "alias l='ls -AlhF'" >> ~/.bashrc
-echo "alias g='git'" >> ~/.bashrc
-echo "alias gp='git pull'" >> ~/.bashrc
-echo "alias gs='git status'" >> ~/.bashrc
-echo "alias ga='git add .'" >> ~/.bashrc
-echo "alias gf='git fetch'" >> ~/.bashrc
+echo "alias l='ls -AlhF'" >> /home/$username/.bashrc
+echo "alias g='git'" >> /home/$username/.bashrc
+echo "alias gp='git pull'" >> /home/$username/.bashrc
+echo "alias gs='git status'" >> /home/$username/.bashrc
+echo "alias ga='git add .'" >> /home/$username/.bashrc
+echo "alias gf='git fetch'" >> /home/$username/.bashrc
 
 # Autostart programs
-cp /etc/X11/xinit/xinitrc ~/.xinitrc
+cp /etc/X11/xinit/xinitrc /home/$username/.xinitrc
 echo "exec xclip &
-exec i3" >> ~/.xinitrc
+exec i3" >> /home/$username/.xinitrc
 
 cd ~ &&
 source .bashrc &&
