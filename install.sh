@@ -40,7 +40,7 @@ echo "alias l='ls -AlhF'" >> ~/.bashrc
 
 # Installing Essential Programs
 nala install xinit -y
-nala install --no-install-recommends feh i3 sxhkd xclip xscreensaver rxvt-unicode rofi ranger picom nitrogen lxpolkit x11-xserver-utils unzip yad wget pulseaudio pulseeffects vim tmux pavucontrol arandr xbindkeys -y
+nala install --no-install-recommends feh i3 sxhkd xclip rxvt-unicode rofi ranger picom nitrogen lxpolkit x11-xserver-utils unzip yad wget pulseaudio pulseeffects vim tmux pavucontrol arandr xbindkeys -y
 # Installing Other less important Programs
 nala install --no-install-recommends neofetch htop tldr papirus-icon-theme fonts-noto-color-emoji fonts-font-awesome ripgrep -y
 
@@ -67,8 +67,7 @@ sudo nala install --no-install-recommends brave-browser -y
 
 # Autostart programs
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
-echo "exec xscreensaver &
-exec xclip &
+echo "exec xclip &
 exec i3" >> ~/.xinitrc
 
 # Autostart X at login
