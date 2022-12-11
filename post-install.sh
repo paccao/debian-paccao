@@ -12,3 +12,8 @@ echo "alias gf='git fetch'" >> ~/.bashrc
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
 echo "exec xclip &
 exec i3" >> ~/.xinitrc
+
+cd ~ &&
+source .bashrc &&
+source .bash_profile &&
+source .xinitrc
