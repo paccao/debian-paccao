@@ -45,6 +45,8 @@ alias gp='git pull'
 alias gs='git status'
 alias ga='git add .'
 alias gf='git fetch'" >> ~/.bashrc
+export EDITOR='/usr/bin/vim'
+export SUDO_EDITOR='/usr/bin/vim'
 ```
 
 -   Autostart programs
@@ -62,6 +64,27 @@ su joel
 source ~/.bashrc
 source ~/.bash_profile
 source .xinitrc
+```
+
+-   Disable bell sound in terminal
+
+```
+sudoedit /etc/inputrc
+```
+
+Change the line `set bell-style visible` to `set bell-style none`. Alternatively you can comment the old one out and add the new one.
+
+To remove the bell sound from your system completely, edit the following line:
+
+```
+# rmmod pcspkr
+sudoedit /etc/modprobe.d/blacklist.conf
+```
+
+Add the following line to the list:
+
+```
+blacklist pcspkr
 ```
 
 ## How to fix sudo command not found
@@ -86,3 +109,7 @@ Your network may not work properly by default. If you run apt update and it says
 ## How to install the vim plugin YouCompleteMe:
 
 -   https://ethans.me/posts/2018-09-01-installing-vim-with-youcompleteme-plugin-to-enable-autocomplete/
+
+```
+
+```

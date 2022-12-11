@@ -33,8 +33,8 @@ cp -R Backgrounds /home/$username/Pictures/
 cp .bash_profile /home/$username/
 mv user-dirs.dirs /home/$username/.config
 chown -R $username:$username /home/$username
-mv .vimrc ~/
-mv .tmux.conf ~/
+cp .vimrc ~/.vimrc
+cp .tmux.conf ~/.vimrc
 
 # Installing Essential Programs
 nala install xinit -y

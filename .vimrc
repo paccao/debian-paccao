@@ -1,8 +1,9 @@
-set background=dark
-let g:gruvbox_contrast_dark='dark'
-set tabstop=2
-set t_Co=256
-let g:airline_powerline_fonts = 1
+set background = dark
+let g: gruvbox_contrast_dark = 'dark'
+set tabstop = 2
+set t_Co = 256
+let g: airline_powerline_fonts = 1
+set visualbell
 
 call plug#begin()
 
