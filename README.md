@@ -34,14 +34,6 @@ chmod +x install.sh
 sudo ./install.sh
 ```
 
-The script will prompt you to reboot, after that is done, run:
-
-```
-cd ~/debian-paccao
-chmod +x post-install.sh
-./post-install.sh
-```
-
 ## How to fix sudo command not found
 
 -   https://linuxhint.com/how-to-fix-debian-sudo-command-not-found/#:~:text=By%20default%20in%20Debian%2C%20the,it%20generates%20the%20following%20error.&text=So%20it%20means%20that%20the,mode%20and%20install%20the%20package.
