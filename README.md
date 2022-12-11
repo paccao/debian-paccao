@@ -68,6 +68,12 @@ source .xinitrc
 
 -   https://linuxhint.com/how-to-fix-debian-sudo-command-not-found/#:~:text=By%20default%20in%20Debian%2C%20the,it%20generates%20the%20following%20error.&text=So%20it%20means%20that%20the,mode%20and%20install%20the%20package.
 
+## How to manually start wifi with the terminal
+
+Your network may not work properly by default. If you run apt update and it says it cant resolve the repository, follow this guide:
+
+-   https://www.linuxbabe.com/debian/connect-to-wi-fi-from-terminal-on-debian-wpa-supplicant
+
 ## How to configure X server xinit and autostart i3 on login
 
 -   https://wiki.archlinux.org/title/Xinit#Configuration
