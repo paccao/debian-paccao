@@ -34,6 +34,36 @@ chmod +x install.sh
 sudo ./install.sh
 ```
 
+After finishing that, run:
+
+-   Create custom ls alias
+
+```
+echo "alias l='ls -AlhF'
+alias g='git'
+alias gp='git pull'
+alias gs='git status'
+alias ga='git add .'
+alias gf='git fetch'" >> ~/.bashrc
+```
+
+-   Autostart programs
+
+```
+cp /etc/X11/xinit/xinitrc ~/.xinitrc
+echo "exec xclip &
+exec i3" >> ~/.xinitrc
+```
+
+-   Apply changes to your $username, mine is joel.
+
+```
+su joel
+source ~/.bashrc
+source ~/.bash_profile
+source .xinitrc
+```
+
 ## How to fix sudo command not found
 
 -   https://linuxhint.com/how-to-fix-debian-sudo-command-not-found/#:~:text=By%20default%20in%20Debian%2C%20the,it%20generates%20the%20following%20error.&text=So%20it%20means%20that%20the,mode%20and%20install%20the%20package.

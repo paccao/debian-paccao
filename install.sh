@@ -63,22 +63,5 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=
 sudo nala update
 sudo nala install --no-install-recommends brave-browser -y
 
-# Create custom ls alias
-echo "alias l='ls -AlhF'
-alias g='git'
-alias gp='git pull'
-alias gs='git status'
-alias ga='git add .'
-alias gf='git fetch'" >> ~/.bashrc
-
-# Autostart programs
-cp /etc/X11/xinit/xinitrc ~/.xinitrc
-echo "exec xclip &
-exec i3" >> ~/.xinitrc
-
-source ~/.bashrc
-source ~/.bash_profile
-source .xinitrc
-
 echo "Installation complete. Now reboot your system with:"
 echo "sudo reboot"
