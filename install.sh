@@ -64,21 +64,20 @@ sudo nala update
 sudo nala install --no-install-recommends brave-browser -y
 
 # Create custom ls alias
-echo "alias l='ls -AlhF'" >> /home/$username/.bashrc
-echo "alias g='git'" >> /home/$username/.bashrc
-echo "alias gp='git pull'" >> /home/$username/.bashrc
-echo "alias gs='git status'" >> /home/$username/.bashrc
-echo "alias ga='git add .'" >> /home/$username/.bashrc
-echo "alias gf='git fetch'" >> /home/$username/.bashrc
+echo "alias l='ls -AlhF'
+alias g='git'
+alias gp='git pull'
+alias gs='git status'
+alias ga='git add .'
+alias gf='git fetch'" >> ~/.bashrc
 
 # Autostart programs
-cp /etc/X11/xinit/xinitrc /home/$username/.xinitrc
+cp /etc/X11/xinit/xinitrc ~/.xinitrc
 echo "exec xclip &
-exec i3" >> /home/$username/.xinitrc
+exec i3" >> ~/.xinitrc
 
-cd ~ &&
-source .bashrc &&
-source .bash_profile &&
+source ~/.bashrc
+source ~/.bash_profile
 source .xinitrc
 
 echo "Installation complete. Now reboot your system with:"
