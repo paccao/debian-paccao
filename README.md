@@ -24,7 +24,9 @@ id joel # check that your user has the sudo group.
 exit
 su joel
 ```
+
 ```
+sudo apt install git -y
 git clone https://github.com/paccao/debian-paccao
 cd debian-paccao
 chmod +x install.sh
@@ -38,9 +40,11 @@ You may need to manually run `sudo dpkg --configure -a` to fix the installation.
 https://ethans.me/posts/2018-09-01-installing-vim-with-youcompleteme-plugin-to-enable-autocomplete/
 
 ## How to fix sudo command not found
+
 https://linuxhint.com/how-to-fix-debian-sudo-command-not-found/#:~:text=By%20default%20in%20Debian%2C%20the,it%20generates%20the%20following%20error.&text=So%20it%20means%20that%20the,mode%20and%20install%20the%20package.
 
 ## TODO - figure out why kde plasma gets installed
+
 https://askubuntu.com/questions/727926/how-to-remove-kde-plasma-desktop
 https://www.reddit.com/r/debian/comments/daj1kw/help_uninstalling_kde_from_debian/
 https://www.cyberciti.biz/faq/debian-ubuntu-linux-find-package-installed-updated-date/
