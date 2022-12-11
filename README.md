@@ -34,7 +34,7 @@ chmod +x install.sh
 sudo ./install.sh
 ```
 
-After finishing that, run:
+After finishing that, set up xorg to start on boot, and add some custom aliases:
 
 -   Create custom ls alias
 
