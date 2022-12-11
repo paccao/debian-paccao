@@ -35,10 +35,14 @@ chown -R $username:$username /home/$username
 mv .vimrc ~/
 mv .tmux.conf ~/
 
+# Create custom ls alias
+echo "alias l='ls -AlhF'" >> ~/.bashrc
+
 # Installing Essential Programs
-nala install feh i3 sxhkd rxvt-unicode rofi ranger picom nitrogen lxpolkit x11-xserver-utils unzip yad wget pulseaudio pulseeffects vim tmux lightdm pavucontrol arandr xbindkeys --no-install-recommends -y
+nala install xinit -y
+nala install --no-install-recommends feh i3 sxhkd xclip xscreensaver rxvt-unicode rofi ranger picom nitrogen lxpolkit x11-xserver-utils unzip yad wget pulseaudio pulseeffects vim tmux pavucontrol arandr xbindkeys -y
 # Installing Other less important Programs
-nala install neofetch htop tldr papirus-icon-theme fonts-noto-color-emoji fonts-font-awesome --no-install-recommends -y
+nala install --no-install-recommends neofetch htop tldr papirus-icon-theme fonts-noto-color-emoji fonts-font-awesome ripgrep -y
 
 # Installing fonts
 cd $builddir
@@ -55,15 +59,23 @@ fc-cache -vf
 rm ./FiraCode.zip ./Meslo.zip
 
 # Install brave-browser
-sudo nala install apt-transport-https curl --no-install-recommends -y
+nala install --no-install-recommends apt-transport-https curl --no-install-recommends -y
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo nala update
-sudo nala install brave-browser --no-install-recommends -y
+sudo nala install --no-install-recommends brave-browser -y
 
-# Enable graphical login and change target from CLI to GUI
-systemctl enable lightdm
-systemctl set-default graphical.target
+# Autostart programs
+cp /etc/X11/xinit/xinitrc ~/.xinitrc
+echo "exec xscreensaver &
+exec xclip &
+exec i3" >> ~/.xinitrc
+
+# Autostart X at login
+echo "if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  exec startx
+fi" > ~/.bash_profile
+
 
 echo "Installation complete. Now reboot your system with:"
 echo "sudo reboot"
