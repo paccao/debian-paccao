@@ -30,13 +30,11 @@ mkdir -p /home/$username/Pictures/Backgrounds
 cp .Xresources /home/$username
 cp -R dotconfig/* /home/$username/.config/
 cp -R Backgrounds /home/$username/Pictures/
+cp .bash_profile /home/$username/
 mv user-dirs.dirs /home/$username/.config
 chown -R $username:$username /home/$username
 mv .vimrc ~/
 mv .tmux.conf ~/
-
-# Create custom ls alias
-echo "alias l='ls -AlhF'" >> ~/.bashrc
 
 # Installing Essential Programs
 nala install xinit -y
@@ -64,17 +62,6 @@ sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://b
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo nala update
 sudo nala install --no-install-recommends brave-browser -y
-
-# Autostart programs
-cp /etc/X11/xinit/xinitrc ~/.xinitrc
-echo "exec xclip &
-exec i3" >> ~/.xinitrc
-
-# Autostart X at login
-echo "if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec startx
-fi" > ~/.bash_profile
-
 
 echo "Installation complete. Now reboot your system with:"
 echo "sudo reboot"
