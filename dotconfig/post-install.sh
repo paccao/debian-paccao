@@ -2,6 +2,11 @@
 
 # Create custom ls alias
 echo "alias l='ls -AlhF'" >> ~/.bashrc
+echo "alias g='git'" >> ~/.bashrc
+echo "alias gp='git pull'" >> ~/.bashrc
+echo "alias gs='git status'" >> ~/.bashrc
+echo "alias ga='git add .'" >> ~/.bashrc
+echo "alias gf='git fetch'" >> ~/.bashrc
 
 # Autostart programs
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
