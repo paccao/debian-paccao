@@ -32,14 +32,13 @@ cp -R dotconfig/* /home/$username/.config/
 cp -R Backgrounds /home/$username/Pictures/
 mv user-dirs.dirs /home/$username/.config
 chown -R $username:$username /home/$username
-mv /home/$username/.config/sddm.conf /etc/sddm.conf
 mv .vimrc ~/
 mv .tmux.conf ~/
 
 # Installing Essential Programs
-nala install feh i3 sxhkd rxvt-unicode rofi picom thunar nitrogen lxpolkit x11-xserver-utils unzip yad wget pulseaudio pulseeffects pavucontrol vim tmux sddm -y --no-install-recommends
+nala install feh i3 sxhkd rxvt-unicode rofi ranger picom nitrogen lxpolkit x11-xserver-utils unzip yad wget pulseaudio pulseeffects vim tmux lightdm pavucontrol arandr xbindkeys --no-install-recommends -y
 # Installing Other less important Programs
-nala install neofetch flameshot lxappearance papirus-icon-theme fonts-noto-color-emoji fonts-font-awesome -y --no-install-recommends
+nala install neofetch htop tldr papirus-icon-theme fonts-noto-color-emoji fonts-font-awesome --no-install-recommends -y
 
 # Installing fonts
 cd $builddir
@@ -56,14 +55,14 @@ fc-cache -vf
 rm ./FiraCode.zip ./Meslo.zip
 
 # Install brave-browser
-sudo nala install apt-transport-https curl -y --no-install-recommends
+sudo nala install apt-transport-https curl --no-install-recommends -y
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo nala update
-sudo nala install brave-browser -y --no-install-recommends
+sudo nala install brave-browser --no-install-recommends -y
 
 # Enable graphical login and change target from CLI to GUI
-systemctl enable sddm
+systemctl enable lightdm
 systemctl set-default graphical.target
 
 echo "Installation complete. Now reboot your system with:"
