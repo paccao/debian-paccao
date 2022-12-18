@@ -52,7 +52,7 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+#bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -208,6 +208,16 @@ bindsym $mod+Space exec "setxkbmap -option 'grp:win_space_toggle' -layout us,se"
 
 # keybinding in fancy rofi (automated):
 bindsym F1 exec ~/.config/i3/scripts/keyhint-2
+
+# rofi exit menu
+bindsym $mod+Shift+p exec ~/.config/i3/scripts/powermenu
+
+# rofi app menu
+bindsym $mod+d exec rofi -modi drun -show drun \
+                -config ~/.config/rofi/rofidmenu.rasi
+
+# arandr script
+# exec ~/.screenlayout/laptop+1screen.sh
 
 exec --no-startup-id lxpolkit
 exec picom
