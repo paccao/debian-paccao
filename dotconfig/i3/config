@@ -203,7 +203,8 @@ exec "--no-startup-id xautolock -detectsleep -secure -time 2 -notify 15 -locker 
 bindsym 0xffc6 exec playerctl play-pause
 
 # Switch keyboard layouts between different languages
-bindsym $mod+Space exec "setxkbmap -option 'grp:win_space_toggle' -layout us,sv"
+bindsym $mod+Space exec "setxkbmap -option 'grp:win_space_toggle' -layout us,se"
+#grp:win_space_toggle
 
 # keybinding in fancy rofi (automated):
 bindsym F1 exec ~/.config/i3/scripts/keyhint-2
