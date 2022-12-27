@@ -34,17 +34,12 @@ chmod +x install.sh
 sudo ./install.sh
 ```
 
-After finishing that, set up xorg to start on boot, and add some custom aliases:
+After finishing that, set up xorg to start on boot, set default editors:
 
 -   Create custom ls alias
 
 ```
-echo "alias l='ls -AlhF'
-alias g='git'
-alias gp='git pull'
-alias gs='git status'
-alias ga='git add .'
-alias gf='git fetch'" >> ~/.bashrc
+git config --global core.editor "vim"
 export EDITOR='/usr/bin/vim'
 export SUDO_EDITOR='/usr/bin/vim'
 ```
@@ -63,6 +58,7 @@ exec i3" >> ~/.xinitrc
 su joel
 source ~/.bashrc
 source ~/.bash_profile
+source ~/.bash_aliases
 source .xinitrc
 ```
 
