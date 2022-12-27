@@ -106,6 +106,6 @@ Your network may not work properly by default. If you run apt update and it says
 
 -   https://ethans.me/posts/2018-09-01-installing-vim-with-youcompleteme-plugin-to-enable-autocomplete/
 
-```
-
-```
+## Other programs you might want to install
+ble.sh
+asdf
