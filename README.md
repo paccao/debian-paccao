@@ -1,4 +1,4 @@
-# Debian Minimal with i3
+# Debian Minimal with i4
 
 The Debian configuration was based of https://github.com/ChrisTitusTech/Debian-titus installation script and modified to fit my own needs. Credits to them!
 
@@ -36,9 +36,15 @@ chmod +x install.sh
 sudo ./install.sh
 ```
 
-After finishing that, set up xorg to start on boot, set default editors:
+After finishing that, set up xorg to start on boot, run the following post-setup things.
 
--   Create custom ls alias
+-		Install synth-shell for a better bash prompt.
+```
+git clone --recursive https://github.com/andresgongora/synth-shell.git
+chmod +x synth-shell/setup.sh
+cd synth-shell
+./setup.sh
+```
 
 ```
 git config --global core.editor "vim"
