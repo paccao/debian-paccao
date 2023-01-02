@@ -92,6 +92,17 @@ Add the following line to the list:
 blacklist pcspkr
 ```
 
+### Good job!
+If you got any problems with the installation, please create an issue here on GitHub and I will look into it. I update this repo with the `update-dotfiles.sh` script from my personal laptop and don't always test the install script. Most likely some packages could be missing which is an easy fix, however the install script is not set up to continue where it crashed so you would have to hack into it and remove the parts from your locally downloaded script and run it again after fixing issues."
+
+Also, some of my keyboard shortcuts I have defined in dotconfig/i3/config may not work on your system depending on your keyboard layout. I recommend you search for your issues or set up your own i3 config using the arch wiki. The arch wiki is like the holy trinity of resources in the Linux space and you will most likely find fixes to caveats and very specific issues to your system there.
+
+*Some helpful commands and tips I can give you:*
+My default keybinding to open a terminal is `Super key + Enter`
+The `alias` command will give you a hint on what shortcut aliases you can use, this is based on the .bash_aliases file.
+Press F1 to get another view of which commands you can run on your system.
+
+### Other potentially helpful resources
 ## How to fix sudo command not found
 
 -   https://linuxhint.com/how-to-fix-debian-sudo-command-not-found/#:~:text=By%20default%20in%20Debian%2C%20the,it%20generates%20the%20following%20error.&text=So%20it%20means%20that%20the,mode%20and%20install%20the%20package.
