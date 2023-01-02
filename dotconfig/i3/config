@@ -222,9 +222,6 @@ bindsym $mod+Shift+p exec ~/.config/i3/scripts/powermenu
 bindsym $mod+d exec rofi -modi drun -show drun \
                 -config ~/.config/rofi/rofidmenu.rasi
 
-# arandr script
-# exec ~/.screenlayout/laptop+1screen.sh
-
 exec --no-startup-id lxpolkit
 exec picom
 exec_always nitrogen --restore
