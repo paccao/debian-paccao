@@ -13,6 +13,8 @@ Use the following Debian ISO as the base <https://cdimage.debian.org/cdimage/uno
 -   Doublecheck that the link is up to date before downloading.
 -   _Do NOT grab the EDU download and this includes non-free and firmware_
 
+Go through the installation process in debians netinstaller. After rebooting into your main harddrive, you are ready to proceed.
+
 ### To install, run the following in a terminal:
 
 ```
