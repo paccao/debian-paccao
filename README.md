@@ -1,4 +1,4 @@
-# Debian Minimal with i4
+# Debian Minimal with i3 window manager
 
 The Debian configuration was based of https://github.com/ChrisTitusTech/Debian-titus installation script and modified to fit my own needs. Credits to them!
 
