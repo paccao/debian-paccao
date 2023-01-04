@@ -8,6 +8,8 @@ alias l='ls -AlhF'
 alias ll='ls -ltr'
 alias lt='ll -t'                  	# sort by date
 alias lz='ll -rS'                   # sort by size
+alias ali='vim ~/.bash_aliases'
+alias ali-s='source ~/.bash_aliases'
 
 mcd () {
         [ -d $1 ] || mkdir $1
@@ -29,6 +31,9 @@ git pull
 git checkout local_branch_name
 git rebase main
 git push --force # force required if youve already pushed"'
+alias gcb='git rev-parse --abbrev-ref HEAD'
+alias ggsmm='CURRENT=`gcb` && gp && gsm ; MAIN=`gcb` && gp && g switch $CURRENT && g merge $MAIN'
+alias gsmgs='CURRENT=`gcb` && gsm ; gs && g switch $CURRENT'
 
 # Kube
 alias t='terraform'
@@ -54,6 +59,7 @@ alias dl="cd ~/Downloads"
 alias df='df -h'
 alias du='du -c -h'
 alias ping='ping -c 3'
+alias co='cd ~/c'
 
 #View specified line range of a file:
 viewlines () { sed -n ''$1','$2'p' $3; }

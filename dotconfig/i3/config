@@ -198,7 +198,7 @@ client.placeholder      #212121 #0c0c0c #ffffff #212121   #262626
 client.background       #212121
 
 # super fast keyboard cursor delay and rate!
-exec xset r rate 250 60
+exec xset r rate 250 40
 
 # keybinding to lock screen
 bindsym $mod+l exec "i3lock -c 000000 & sleep 1 ; systemctl suspend"
@@ -222,6 +222,7 @@ bindsym $mod+Shift+p exec ~/.config/i3/scripts/powermenu
 bindsym $mod+d exec rofi -modi drun -show drun \
                 -config ~/.config/rofi/rofidmenu.rasi
 
+exec cd ~ && .screenlayout/laptop+1screen.sh
 exec --no-startup-id lxpolkit
 exec picom
 exec_always nitrogen --restore
