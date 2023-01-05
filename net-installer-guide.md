@@ -29,6 +29,6 @@ Under software selection I UNCHECKED 'Debian desktop environment' and also unche
 I kept standard system utilities, they barely take up any space but tbh I don't know what packages they include. You can probably leave them out if you feel spicy. ;)
 Uncheck with SPACEBAR, move with arrow keys and enter to continue.
 
-Install GRUB boot loader on your primary drive, select what drive to install on.
+Install GRUB boot loader on your primary drive, select what drive to install on. I picked what the installer recommended me, /dev/sda. This most likely depends on your system.
 
 After your netinstaller is finished, reboot your system. You can now follow the README.md file for the next steps of the installation.
