@@ -71,6 +71,11 @@ explain() {
 net() {
 	open "https://www.$1";
 }
+
+# Interactively deletes workflow runs from a GitHub repository
+# Download this script from https://github.com/qmacro/dotfiles/blob/230c6df494f239e9d1762794943847816e1b7c32/scripts/dwr and store it somewhere on your system
+# Usage: `dwr paccao/debian-paccao` then TAB through which runs you want to delete. You can go to the top and hold TAB to select faster.
+alias dwr='. ~/scripts/dwr.sh'
 	
 #View specified line range of a file:
 viewlines () { sed -n ''$1','$2'p' $3; }
