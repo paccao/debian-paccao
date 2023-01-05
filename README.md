@@ -2,11 +2,11 @@
 
 The Debian configuration was based of https://github.com/ChrisTitusTech/Debian-titus installation script and modified to fit my own needs. Credits to them!
 
-## Requirements
+### Information
 
-_This install changes Debian to the SID (Dev) Branch_
+_This installation changes Debian to the SID (Dev) Branch_
 
-### Download Debian non-free netinstall
+### Download Debian non-free netinstall to cherrypick your installation
 
 Use the following Debian ISO as the base <https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/weekly-builds/amd64/iso-cd/>
 
