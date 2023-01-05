@@ -47,6 +47,7 @@ alias rm='echo "use trash-cli instead!" ; tldr trash'
 alias tr='trash'
 alias trl='trash-list'
 alias trr='trash-restore'
+alias trre='FILE_PATH_REMOVE=$1 && trash FILE_PATH_REMOVE && trash-rm "$FILE_PATH_REMOVE" && unset FILE_PATH_REMOVE'
 
 # IP addresses
 alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -61,6 +62,16 @@ alias du='du -c -h'
 alias ping='ping -c 3'
 alias co='cd ~/c'
 
+# Explains a bash command, opens https://explainshell.com/
+explain() {
+	open "https://explainshell.com/explain?cmd=$1";
+}
+
+# Open a web page
+net() {
+	open "https://www.$1";
+}
+	
 #View specified line range of a file:
 viewlines () { sed -n ''$1','$2'p' $3; }
 
