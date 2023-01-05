@@ -39,8 +39,8 @@ cp .tmux.conf ~/.vimrc
 # Installing Essential Programs
 nala install xinit -y
 nala install --no-install-recommends feh i3 suckless-tools sxhkd xclip rxvt-unicode rofi ranger picom nitrogen lxpolkit flameshot x11-xserver-utils unzip yad wget pulseaudio pulseeffects vim-gtk tmux pavucontrol arandr xbindkeys trash-cli powerline-fonts net-tools -y
-# Installing Other less important Programs
-nala install --no-install-recommends neofetch htop tldr papirus-icon-theme fonts-noto-color-emoji fonts-font-awesome ripgrep -y
+# Installing Other less important Programs (Certain programs are needed for various scripts in my config)
+nala install --no-install-recommends neofetch htop tldr papirus-icon-theme fonts-noto-color-emoji fonts-font-awesome ripgrep fzf -y
 
 # Installing fonts
 cd $builddir
