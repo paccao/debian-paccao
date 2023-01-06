@@ -73,6 +73,5 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=
 sudo nala update
 sudo nala install --no-install-recommends brave-browser -y
 
-echo "Installation complete. Now quit your current tty session and log in again"
-echo "If you are currently logged in as the root user, type `exit`"
-echo "Otherwise press CTRL+d until you are prompted to log into your username again."
+echo "Install script completed."
+echo "Now reboot your system with `sudo reboot`."
