@@ -24,17 +24,27 @@ apt install nala -y
 
 # Making .config and Moving config files and background to Pictures
 cd $builddir
+
 mkdir -p /home/$username/.config
-mkdir -p /home/$username/.fonts
 mkdir -p /home/$username/Pictures/Backgrounds
-cp .Xresources /home/$username
+mkdir -p /home/$username/.screenlayout
+mkdir -p /home/$username/.fonts
+
 cp -R dotconfig/* /home/$username/.config/
 cp -R Backgrounds /home/$username/Pictures/
-cp .bash_profile /home/$username/
-mv user-dirs.dirs /home/$username/.config
+cp -R .screenlayout /home/$username/.screenlayout
+
+cp .Xmodmap /home/$username
+cp .Xresources /home/$username
+cp .bash_aliases /home/$username
+cp .bash_profile /home/$username
+cp .bashrc /home/$username
+cp .tmux.conf /home/$username
+cp .vimrc /home/$username
+cp .xinitrc /home/$username
+cp user-dirs.dirs /home/$username/.config
+
 chown -R $username:$username /home/$username
-cp .vimrc ~/.vimrc
-cp .tmux.conf ~/.vimrc
 
 # Installing Essential Programs
 nala install xinit -y
