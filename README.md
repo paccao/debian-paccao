@@ -55,13 +55,13 @@ sudo ./install.sh
 After reboot, run the following post-setup things.
 
 -   Install `synth-shell` for a better bash prompt, go through the interactive installer.
-*IMPORTANT:* I only installed synth-shell-prompt and better-history, which lies in my .bashrc file. If you would like other features of synth-shell I recommend that you remove the lines from the bottom of my .bashrc file that you have copied that has anything to do with synth-shell. Then run the provided synth-shell script again to get a *clean installation*.
 ```shell
 git clone --recursive https://github.com/andresgongora/synth-shell.git
 chmod +x synth-shell/setup.sh
 cd synth-shell
 ./setup.sh
 ```
+*IMPORTANT:* I only installed synth-shell-prompt and better-history, which lies in my .bashrc file. If you would like other features of synth-shell I recommend that you remove the lines from the bottom of my .bashrc file that you have copied that has anything to do with synth-shell. Then run the provided synth-shell script again to get a *clean installation*.
 
 ```shell
 git config --global core.editor "vim"
