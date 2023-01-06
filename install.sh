@@ -42,7 +42,7 @@ cp .bashrc /home/$username
 cp .tmux.conf /home/$username
 cp .vimrc /home/$username
 cp .xinitrc /home/$username
-cp user-dirs.dirs /home/$username/.config
+cp users-dirs.dirs /home/$username/.config
 
 chown -R $username:$username /home/$username
 
