@@ -3,6 +3,6 @@
 # invoke global X session script
 . /etc/X11/Xsession
 xmodmap ~/.Xmodmap
-exec iclip &
+exec xclip &
 exec flameshot &
 exec i3
