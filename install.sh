@@ -53,7 +53,7 @@ nala install --no-install-recommends feh i3 suckless-tools sxhkd xclip rxvt-unic
 nala install --no-install-recommends neofetch htop tldr papirus-icon-theme fonts-noto-color-emoji fonts-font-awesome ripgrep fzf -y
 
 # Installing fonts
-cd $builddir
+cd /home/$username
 curl -JLO https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip -o Hack-v3.zip
 unzip Hack-v3.zip
 cp ttf/* ~/.fonts
@@ -62,7 +62,7 @@ chown $username:$username /home/$username/.fonts/*
 # Reloading Font
 fc-cache -vf
 # Removing zip Files
-rm ./FiraCode.zip ./Meslo.zip
+trash ttf Hack-v3.003-ttf.zip
 
 # Install brave-browser
 nala install --no-install-recommends apt-transport-https curl --no-install-recommends -y
