@@ -118,6 +118,8 @@ My default keybinding to open a terminal is `Super key + Enter`\
 The `alias` command will give you a hint on what shortcut aliases you can use, this is based on the .bash_aliases file.\
 Press F1 to get another view of which commands you can run on your system.
 
+⭐[explainshell.com](https://explainshell.com/) - write a command with flags you are uncertain of and it will explain each part.
+
 ### Other potentially helpful resources
 ## How to fix sudo command not found
 
