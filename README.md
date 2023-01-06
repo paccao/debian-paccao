@@ -15,9 +15,20 @@ Use the following Debian ISO as the base <https://cdimage.debian.org/cdimage/uno
 
 Go through the installation process in debians netinstaller. After rebooting into your main harddrive, you are ready to proceed.
 
+
+### Check installed packages and total amount of current packages/processes
+```shell
+# Check which packages are installed:
+apt list --installed
+# Check amount of packages installed:
+apt list --installed | wc -l
+# Check amount of processes are active
+ps aux | wc -l
+```
+
 ### To install, run the following in a terminal:
 
-```
+```shell
 su -
 apt update &&
 apt-get update &&
@@ -28,7 +39,7 @@ exit
 su joel
 ```
 
-```
+```shell
 sudo apt install git -y
 git clone https://github.com/paccao/debian-paccao
 cd debian-paccao
@@ -40,14 +51,14 @@ After finishing that, set up xorg to start on boot, run the following post-setup
 
 -		Install synth-shell for a better bash prompt, go through the interactive installer.
 *IMPORTANT:* I only installed synth-shell-prompt and better-history. You can check that in my .bashrc file. If you would like other features of synth-shell I recommend that you remove the lines from the bottom of my .bashrc file that you have copied that has anything to do with synth-shell. Then run the provided synth-shell script again to get a *clean installation*.
-```
+```shell
 git clone --recursive https://github.com/andresgongora/synth-shell.git
 chmod +x synth-shell/setup.sh
 cd synth-shell
 ./setup.sh
 ```
 
-```
+```shell
 git config --global core.editor "vim"
 export EDITOR='/usr/bin/vim'
 export SUDO_EDITOR='/usr/bin/vim'
@@ -55,7 +66,7 @@ export SUDO_EDITOR='/usr/bin/vim'
 
 -   Autostart programs
 
-```
+```shell
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
 echo "exec xclip &
 exec i3" >> ~/.xinitrc
@@ -63,7 +74,7 @@ exec i3" >> ~/.xinitrc
 
 -   Apply changes to your $username, mine is joel.
 
-```
+```shell
 su joel
 source ~/.bashrc
 source ~/.bash_profile
@@ -73,7 +84,7 @@ source .xinitrc
 
 -   Disable bell sound in terminal
 
-```
+```shell
 sudoedit /etc/inputrc
 ```
 
@@ -81,14 +92,14 @@ Change the line `set bell-style visible` to `set bell-style none`. Alternatively
 
 To remove the bell sound from your system completely, edit the following line:
 
-```
+```shell
 # rmmod pcspkr
 sudoedit /etc/modprobe.d/blacklist.conf
 ```
 
 Add the following line to the list:
 
-```
+```shell
 blacklist pcspkr
 ```
 
