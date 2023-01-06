@@ -54,11 +54,9 @@ nala install --no-install-recommends neofetch htop tldr papirus-icon-theme fonts
 
 # Installing fonts
 cd $builddir
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/FiraCode.zip
-unzip FiraCode.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/Meslo.zip
-unzip Meslo.zip -d /home/$username/.fonts
-mv dotfonts/fontawesome/otfs/*.otf /home/$username/.fonts/
+curl -JLO https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip -o Hack-v3.zip
+unzip Hack-v3.zip
+cp ttf/* ~/.fonts
 chown $username:$username /home/$username/.fonts/*
 
 # Reloading Font
