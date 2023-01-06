@@ -24,6 +24,11 @@ apt list --installed
 apt list --installed | wc -l
 # Check amount of processes are active
 ps aux | wc -l
+
+# Alternatively use dpkg
+dpkg -l
+# Search for a specific package
+dpkg -l | grep "zstd"
 ```
 
 ### To install, run the following in a terminal:
