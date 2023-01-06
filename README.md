@@ -43,7 +43,7 @@ id joel # check that your user has the sudo group.
 exit
 su joel
 ```
-
+[If the su - command doesn't work](https://superuser.com/questions/1224340/debian-9-su-command-not-working)
 ```shell
 sudo apt install git -y
 git clone https://github.com/paccao/debian-paccao
@@ -54,7 +54,7 @@ sudo ./install.sh
 
 After finishing that, set up xorg to start on boot, run the following post-setup things.
 
--		Install synth-shell for a better bash prompt, go through the interactive installer.
+-   Install `synth-shell` for a better bash prompt, go through the interactive installer.
 *IMPORTANT:* I only installed synth-shell-prompt and better-history. You can check that in my .bashrc file. If you would like other features of synth-shell I recommend that you remove the lines from the bottom of my .bashrc file that you have copied that has anything to do with synth-shell. Then run the provided synth-shell script again to get a *clean installation*.
 ```shell
 git clone --recursive https://github.com/andresgongora/synth-shell.git
@@ -113,9 +113,9 @@ If you got any problems with the installation, please create an issue here on Gi
 
 Also, some of my keyboard shortcuts I have defined in dotconfig/i3/config may not work on your system depending on your keyboard layout. I recommend you search for your issues or set up your own i3 config using the arch wiki. The arch wiki is like the holy trinity of resources in the Linux space and you will most likely find fixes to caveats and very specific issues to your system there.
 
-*Some helpful commands and tips I can give you:*
-My default keybinding to open a terminal is `Super key + Enter`
-The `alias` command will give you a hint on what shortcut aliases you can use, this is based on the .bash_aliases file.
+*Some helpful commands and tips I can give you:*\
+My default keybinding to open a terminal is `Super key + Enter`\
+The `alias` command will give you a hint on what shortcut aliases you can use, this is based on the .bash_aliases file.\
 Press F1 to get another view of which commands you can run on your system.
 
 ### Other potentially helpful resources
