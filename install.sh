@@ -72,4 +72,4 @@ sudo nala update
 sudo nala install --no-install-recommends brave-browser -y
 
 echo "Install script completed."
-echo "Now reboot your system with `sudo reboot`."
+sudo reboot
