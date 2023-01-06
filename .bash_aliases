@@ -47,6 +47,7 @@ alias rm='echo "use trash-cli instead!" ; tldr trash'
 alias tr='trash'
 alias trl='trash-list'
 alias trr='trash-restore'
+alias tre='trash-empty'
 alias trre='FILE_PATH_REMOVE=$1 && trash FILE_PATH_REMOVE && trash-rm "$FILE_PATH_REMOVE" && unset FILE_PATH_REMOVE'
 
 # IP addresses
