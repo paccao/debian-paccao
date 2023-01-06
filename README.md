@@ -52,6 +52,7 @@ chmod +x install.sh
 sudo ./install.sh
 ```
 
+Install script complete! 🎈
 After reboot, run the following post-setup things.
 
 -   Install `synth-shell` for a better bash prompt, go through the interactive installer.
@@ -70,7 +71,7 @@ export SUDO_EDITOR='/usr/bin/vim'
 ```
 
 -   Autostart programs
-Edit the .xinitrc file. Add your programs before i3.
+Add autostart programs to .xinitrc file. 
 
 -   Disable bell sound in terminal
 
