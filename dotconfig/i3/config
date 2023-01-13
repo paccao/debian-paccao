@@ -59,6 +59,11 @@ bindsym $mod+Shift+d exec --no-startup-id dmenu_run
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
+#bindsym $mod1+y	keycode Left
+#bindsym $mod1+u Up
+#bindsym $mod1+i Down
+#bindsym $mod1+o Right
+
 # change focus
 bindsym $mod1+j focus left
 bindsym $mod1+k focus down

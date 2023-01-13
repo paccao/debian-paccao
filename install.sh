@@ -50,7 +50,7 @@ chown -R $username:$username /home/$username
 nala install xinit -y
 nala install --no-install-recommends feh i3 suckless-tools sxhkd xclip rxvt-unicode rofi ranger picom nitrogen lxpolkit flameshot x11-xserver-utils unzip yad wget pulseaudio pulseeffects vim-gtk3 tmux pavucontrol arandr xbindkeys trash-cli fonts-powerline net-tools -y
 # Installing Other less important Programs (Certain programs are needed for various scripts in my config)
-nala install --no-install-recommends neofetch htop tldr papirus-icon-theme fonts-noto-color-emoji fonts-font-awesome ripgrep fzf -y
+nala install --no-install-recommends neofetch htop tldr papirus-icon-theme fonts-noto-color-emoji fonts-font-awesome ripgrep fzf inxi lspci pactl bat -y
 
 # Installing fonts
 cd /home/$username
