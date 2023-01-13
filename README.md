@@ -106,6 +106,9 @@ Press F1 to get another view of which commands you can run on your system.
 ⭐[explainshell.com](https://explainshell.com/) - write a command with flags you are uncertain of and it will explain each part.
 
 ### Other potentially helpful resources
+## Custom screen saver which is more secure
+-   https://vincent.bernat.ch/en/blog/2021-xsecurelock
+
 ## How to fix sudo command not found
 
 -   https://linuxhint.com/how-to-fix-debian-sudo-command-not-found/#:~:text=By%20default%20in%20Debian%2C%20the,it%20generates%20the%20following%20error.&text=So%20it%20means%20that%20the,mode%20and%20install%20the%20package.
@@ -115,6 +118,8 @@ Press F1 to get another view of which commands you can run on your system.
 Your network may not work properly by default. If you run apt update and it says it cant resolve the repository, follow this guide:
 
 -   https://www.linuxbabe.com/debian/connect-to-wi-fi-from-terminal-on-debian-wpa-supplicant
+
+You can also look at the aliases I have created for wifi related stuff in .bash_aliases
 
 ## How to configure X server xinit and autostart i3 on login
 
