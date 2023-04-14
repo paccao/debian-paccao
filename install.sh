@@ -71,5 +71,8 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=
 sudo nala update
 sudo nala install --no-install-recommends brave-browser -y
 
+# Adds my default bashrc prompt config. WARNING! This may collide with synth-shell.
+echo "export PS1='\u@\h:\w \$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')\n\\$ \[\$(tput sgr0)\]'" >> ~/.bashrc
+
 echo "Install script completed."
 sudo reboot
