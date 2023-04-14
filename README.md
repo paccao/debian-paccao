@@ -137,3 +137,6 @@ You can also look at the aliases I have created for wifi related stuff in .bash_
 ## Other programs you might want to install
 ble.sh
 asdf
+
+## custom bashrc prompts (add git branch, show hostname and user or just have a plain simple $.
+https://bashrcgenerator.com/
