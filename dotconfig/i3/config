@@ -147,7 +147,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # move workspace to another monitor/output
-bindsym $mod+m move workspace to output up 
+bindsym $mod+m move workspace to output left 
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -201,7 +201,8 @@ client.background       #212121
 exec xset r rate 250 40
 
 # keybinding to lock screen
-bindsym $mod+l exec "i3lock -c 000000 & sleep 1 ; systemctl suspend"
+bindsym $mod+Shift+l exec "i3lock -c 000000 & sleep 1 ; systemctl suspend"
+bindsym $mod+l exec "i3lock -c 000000"
 
 # auto lock the screen
 exec "--no-startup-id xautolock -detectsleep -secure -time 2 -notify 15 -locker \"i3lock -c 000000 & sleep 1 ; systemctl suspend\""
@@ -225,4 +226,5 @@ bindsym $mod+d exec rofi -modi drun -show drun \
 exec cd ~ && .screenlayout/laptop+1screen.sh
 exec --no-startup-id lxpolkit
 exec picom
+exec flameshot &
 exec_always nitrogen --restore
