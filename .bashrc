@@ -20,7 +20,7 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 
 # History security
-export HISTIGNORE="&:*[Pp][Aa][Ss][Ss][Ww][Oo][Rr][Dd]*:*[Aa][Zz][ \t][Ll][Oo][Gg][Ii][Nn]*"
+#export HISTIGNORE="&:*[Pp][Aa][Ss][Ss][Ww][Oo][Rr][Dd]*:*[Aa][Zz][ \t][Ll][Oo][Gg][Ii][Nn]*"
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
