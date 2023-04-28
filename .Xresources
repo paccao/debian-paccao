@@ -44,7 +44,7 @@ URxvt.background:             #2f343f
 URxvt.depth:		              32
 URxvt.scrollBar:	            false
 URxvt.internalBorder:         0
-URxvt.font:		                xft:Hack:style=Regular:antialiasing=true:size=14
+URxvt*font:		                xft:Hack:style=Regular:antialiasing=true:size=14
 URxvt.transparent:            true
 URxvt.shading:                20
 
