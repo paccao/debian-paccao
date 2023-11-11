@@ -87,12 +87,12 @@ alias ke='kubens'
 alias ku='kustomize'
 
 # trash
-alias rm='echo "use tr (trash-cli) instead!"'
+#alias rm='echo "use tr (trash-cli) instead!"'
 #alias tr='trash'
-alias trl='trash-list'
-alias trr='trash-restore'
-alias tre='trash-empty'
-alias trre='FILE_PATH_REMOVE=$1 && trash FILE_PATH_REMOVE && trash-rm "$FILE_PATH_REMOVE" && unset FILE_PATH_REMOVE'
+#alias trl='trash-list'
+#alias trr='trash-restore'
+#alias tre='trash-empty'
+#alias trre='FILE_PATH_REMOVE=$1 && trash FILE_PATH_REMOVE && trash-rm "$FILE_PATH_REMOVE" && unset FILE_PATH_REMOVE'
 
 # IP and network 
 alias pubip="curl ifconfig.me"
