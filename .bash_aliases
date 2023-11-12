@@ -6,6 +6,12 @@ alias .....="cd ../../../.."
 
 alias mv='mv -i' # Prevent overwrite with mv cmd
 
+unzd() {
+	if [[ $# != 1 ]]; then echo "I need a single argument, the name of the archive to extract" ; return 1; fi
+	target="${1%.zip}"
+	unzip "$1" -d "${target##*/}"
+}
+
 alias ls='ls --group-directories-first -CF --color=auto'
 alias l='ls --group-directories-first -AlhF'
 alias ll='ls -ltr'
