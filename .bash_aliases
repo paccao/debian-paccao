@@ -12,6 +12,7 @@ unzd() {
 	unzip "$1" -d "${target##*/}"
 }
 
+alias rm='rm -i'
 alias ls='ls --group-directories-first -CF --color=auto'
 alias l='ls --group-directories-first -AlhF'
 alias ll='ls -ltr'
@@ -35,6 +36,7 @@ alias clipboard='xclip -selection c'
 alias firmwareupdate='fwupdmgr update'
 alias diskusage='ncdu'
 alias process='ps -aux | head -n1 && ps -aux'
+alias z='zoxide'
 
 ## Devices
 alias keyboard='setxkbmap -layout us,se -option "grp:win_space_toggle" && xmodmap .Xmodmap'
@@ -84,6 +86,7 @@ alias ggsmm='git pull origin $(gcb) --rebase'
 alias gsmgs='CURRENT=`gcb` && gsm ; gs && g switch $CURRENT'
 alias deletelocalbranch='git branch --delete'
 alias gpushu='git push -u origin $(gcb)'
+alias gprunelocal="git fetch -p ; git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d"
 
 # Kube
 alias t='terraform'
