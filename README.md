@@ -68,6 +68,7 @@ cd synth-shell
 git config --global core.editor "vim"
 export EDITOR='/usr/bin/vim'
 export SUDO_EDITOR='/usr/bin/vim'
+sudo update-alternatives --config editor
 ```
 
 -   Autostart programs
